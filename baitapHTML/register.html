@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Đăng ký nhận thông tin - Blakletterpress</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<style>
+		/* Chỉ dành cho register.html; không sửa css/style.css */
+		#main.register-main { min-height: 1180px; }
+		#register { 
+			padding-top: 2px;
+			font-family: Arial, Tahoma, "Segoe UI", sans-serif;
+		}
+		#register h1 {
+			font-family: "Times New Roman", Times, serif;
+		}
+		#register input,
+		#register select,
+		#register textarea,
+		#register button {
+			font-family: Arial, Tahoma, "Segoe UI", sans-serif;
+		}
+		#register h1 { font-size: 29px; margin-bottom: 28px; }
+		#register p.register-intro { font-size: 13px; line-height: 20px; padding-bottom: 30px; text-align: left; }
+		.register-form { color: #525252; font-size: 13px; }
+		.register-form fieldset { border: 1px solid #aaa59e; margin: 0 0 10px; padding: 6px 14px 18px; }
+		.register-form legend { color: #333; font-size: 14px; font-weight: normal; padding: 0 2px; }
+		.register-form label, .register-form .field-label { display: block; line-height: 20px; margin: 0 0 3px; }
+		.register-form input[type="text"], .register-form input[type="email"], .register-form input[type="password"],
+		.register-form input[type="tel"], .register-form input[type="date"], .register-form input[type="number"],
+		.register-form select, .register-form textarea { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin: 0 0 27px; }
+		.register-form input[type="text"], .register-form input[type="email"], .register-form input[type="password"], .register-form input[type="tel"] { height: 22px; width: 175px; }
+		.register-form input[type="date"] { height: 23px; width: 100px; }
+		.register-form input[type="number"] { height: 22px; width: 72px; }
+		.register-form select { height: 24px; width: 130px; }
+		.register-form textarea { height: 66px; resize: vertical; width: 310px; }
+		.register-form .inline-options { margin: 21px 0 27px; }
+		.register-form .inline-options label { display: inline-block; margin: 0 10px 0 0; }
+		.register-form .inline-options input, .register-form .terms input { vertical-align: middle; }
+		.register-form .topics { margin-top: 18px; }
+		.register-form .terms { margin: 8px 0 0; }
+		.register-form .form-actions { margin-top: 0; }
+		.register-form .form-btn {
+			background: linear-gradient(#56bd57, #197928); border: 1px solid #126220;
+			box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); color: #fff; cursor: pointer;
+			font-family: Georgia, "Times New Roman", Times, serif; font-size: 12px; font-weight: bold;
+			height: 23px; margin-right: 4px; padding: 0 7px; text-shadow: 0 1px #174d1b;
+		}
+		.register-form .form-btn:hover { filter: brightness(1.08); }
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="motto">
+				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="SiteName"></a>
+				<p><img src="images/header-text.png" height="14" width="218" alt="Text"></p>
+			</div>
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+			</div>
+			<div id="searchbar">
+				<form action="#" method="post">
+					<input type="text" value="Enter search query" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+					<input type="submit" value="Search" class="btn">
+				</form>
+			</div>
+		</div>
+
+		<div id="contents">
+			<div id="main" class="register-main">
+				<div id="register" class="body">
+					<h1>Đăng ký nhận thông tin</h1>
+					<p class="register-intro">Điền thông tin bên dưới để nhận bản tin định kỳ. Các trường có dấu “ * ” là bắt buộc.</p>
+
+					<form class="register-form" action="#" method="post">
+						<fieldset>
+							<legend>Thông tin tài khoản</legend>
+
+							<label for="fullname">Họ và tên *</label>
+							<input id="fullname" name="fullname" type="text" placeholder="Nguyễn Văn A" required>
+
+							<label for="email">Email *</label>
+							<input id="email" name="email" type="email" placeholder="ban@example.com" required>
+
+							<label for="password">Mật khẩu * (tối thiểu 8 ký tự)</label>
+							<input id="password" name="password" type="password" minlength="8" required>
+
+							<label for="phone">Số điện thoại * (10 số, bắt đầu bằng 0)</label>
+							<input id="phone" name="phone" type="tel" pattern="0[0-9]{9}" maxlength="10" required>
+						</fieldset>
+
+						<fieldset>
+							<legend>Thông tin cá nhân</legend>
+
+							<label for="birthday">Ngày sinh *</label>
+							<input id="birthday" name="birthday" type="date" required>
+
+							<label for="age">Độ tuổi *</label>
+							<input id="age" name="age" type="number" min="1" max="120" required>
+
+							<span class="field-label">Giới tính *</span>
+							<div class="inline-options">
+								<label><input type="radio" name="gender" value="nam" required> Nam</label>
+								<label><input type="radio" name="gender" value="nu"> Nữ</label>
+								<label><input type="radio" name="gender" value="khac"> Khác</label>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>Tùy chọn nhận tin</legend>
+
+							<span class="field-label">Chủ đề quan tâm</span>
+							<div class="inline-options topics">
+								<label><input type="checkbox" name="topics" value="tintuc"> Tin tức</label>
+								<label><input type="checkbox" name="topics" value="blog"> Blog</label>
+								<label><input type="checkbox" name="topics" value="sukien"> Sự kiện</label>
+							</div>
+
+							<label for="region">Khu vực</label>
+							<select id="region" name="region">
+								<option value="">-- Chọn khu vực --</option>
+								<option>Miền Bắc</option>
+								<option>Miền Trung</option>
+								<option>Miền Nam</option>
+							</select>
+
+							<label for="message">Lời nhắn</label>
+							<textarea id="message" name="message" rows="4" placeholder="Bạn muốn nhận nội dung gì?"></textarea>
+
+							<label class="terms"><input type="checkbox" name="terms" required> Tôi đồng ý với điều khoản sử dụng *</label>
+						</fieldset>
+
+						<div class="form-actions">
+							<input type="submit" value="Đăng ký" class="form-btn">
+							<input type="reset" value="Nhập lại" class="form-btn">
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div id="navigation">
+					<div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div id="connect">
+						<h2>Connect with us:</h2>
+						<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a>
+						<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a>
+						<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
+					</div>
+				</div>
+				<div class="section">
+					<div id="posts">
+						<h2>Placeholder</h2>
+						<ul>
+							<li>
+								<h5>Title Sample One</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+							<li>
+								<h5>Title Sample One</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+						</ul>
+						<a href="news.html" class="btn2">View More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div>
+				<ul id="featured">
+					<li><a href="index.html" class="home"></a><p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p></li>
+					<li><a href="index.html" class="bell"></a><p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p></li>
+					<li><a href="index.html" class="globe"></a><p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p></li>
+					<li><a href="index.html" class="pencil"></a><p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p></li>
+				</ul>
+				<p id="footnote">© Copyright © 2011.Company name all rights reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
